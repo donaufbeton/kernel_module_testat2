@@ -1,0 +1,1 @@
+savedcmd_/home/test/Documents/testat2/kernel_module_testat2/mod_stat_scheduler/mod_stat_scheduler.mod := printf '%s\n'   mod_stat_scheduler.o | awk '!x[$$0]++ { print("/home/test/Documents/testat2/kernel_module_testat2/mod_stat_scheduler/"$$0) }' > /home/test/Documents/testat2/kernel_module_testat2/mod_stat_scheduler/mod_stat_scheduler.mod

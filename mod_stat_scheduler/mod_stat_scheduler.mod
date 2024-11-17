@@ -1,0 +1,1 @@
+/home/test/Documents/testat2/kernel_module_testat2/mod_stat_scheduler/mod_stat_scheduler.o

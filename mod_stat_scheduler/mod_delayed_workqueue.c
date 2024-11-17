@@ -31,6 +31,8 @@ static void work_handler(struct work_struct *w) {
     // Do some work, ...
 }
 
+
+
 __init int init_module(void) {
     printk(KERN_DEBUG "Hello from module\n"); // rather pr_debug()
     delay = msecs_to_jiffies(DELAY_MS);
