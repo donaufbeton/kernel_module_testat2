@@ -1,6 +1,6 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
-
+#include <linux/workqueue.h>
 #include <linux/delay.h>
 
 
@@ -18,7 +18,7 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Peschke Julian, Luncz Dominik");
 MODULE_DESCRIPTION("führt periodisch die Methode Work-Handler aus");
 
-static void work_handler(struct work_struct w);
+static void work_handler(struct work_struct *w);
 
 /*
  * Data declarations
@@ -72,3 +72,6 @@ __exit void cleanup_module(void)
     destroy_workqueue(wq);
 
 }
+
+module_init(init_module);    
+module_exit(cleanup_module);
