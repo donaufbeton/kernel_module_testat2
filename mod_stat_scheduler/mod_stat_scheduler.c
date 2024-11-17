@@ -2,6 +2,7 @@
 #include <linux/module.h>
 #include <linux/workqueue.h>
 #include <linux/delay.h>
+#include <linux/sched.h>
 
 
 
@@ -28,8 +29,9 @@ static struct workqueue_struct * wq = NULL;
 static DECLARE_DELAYED_WORK(dwork, work_handler);
 
 static void work_handler(struct work_struct *w) {
+    pid_t pid = task_pid_vnr(current);
     static int times = 0;
-    printk(KERN_DEBUG "work_handler runs w:%pX the %d. time\n", w, times++);
+    printk(KERN_DEBUG "work_handler runs w:%pX the %d. time ..... (PID: %d)\n", w, times++, pid);
 
     if (running) {
         queue_delayed_work(wq, &dwork, msecs_to_jiffies(delay_ms));

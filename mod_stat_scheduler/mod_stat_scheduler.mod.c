@@ -35,6 +35,10 @@ MODULE_INFO(retpoline, "Y");
 
 static const char ____versions[]
 __used __section("__versions") =
+	"\x14\x00\x00\x00\xe8\x2a\x36\x1e"
+	"pcpu_hot\0\0\0\0"
+	"\x1c\x00\x00\x00\x4f\xfd\xe7\x0a"
+	"__task_pid_nr_ns\0\0\0\0"
 	"\x10\x00\x00\x00\x7e\x3a\x2c\x12"
 	"_printk\0"
 	"\x1c\x00\x00\x00\x8f\x18\x02\x7f"
@@ -64,4 +68,4 @@ __used __section("__versions") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "80894E8E1066D57F58A09E3");
+MODULE_INFO(srcversion, "BEFFF1B66DA63450C24FC1A");
