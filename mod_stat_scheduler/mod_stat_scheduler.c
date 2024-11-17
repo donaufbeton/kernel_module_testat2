@@ -32,7 +32,7 @@ static void work_handler(struct work_struct *w) {
     printk(KERN_DEBUG "work_handler runs w:%pX the %d. time\n", w, times++);
 
     if (running) {
-        queue_delayed_work(wq, &dwork, delay_ms);
+        queue_delayed_work(wq, &dwork, msecs_to_jiffies(delay_ms));
     }
 
 
@@ -47,7 +47,6 @@ __init int init_module(void)
     printk (KERN_INFO   "Module mit Parameter %d ms geladen \n", delay_ms);
 
 
-    delay_ms = msecs_to_jiffies(delay_ms);
     wq = alloc_workqueue("test", WQ_UNBOUND, 1);
     if (NULL == wq) {
         pr_err("Cannot allocate workqueue");
@@ -55,7 +54,7 @@ __init int init_module(void)
     }
 
 
-    queue_delayed_work(wq, &dwork, delay_ms);
+    queue_delayed_work(wq, &dwork, msecs_to_jiffies(delay_ms));
 
 
 
@@ -64,14 +63,10 @@ __init int init_module(void)
 
 __exit void cleanup_module(void)
 {
-
+    printk(KERN_INFO "Module Stat_Scheduler wird beendet");
     running = false;
-    printk("Module Stat_Scheduler wird beendet");
 
     cancel_delayed_work_sync(&dwork);
     destroy_workqueue(wq);
 
 }
-
-module_init(init_module);    
-module_exit(cleanup_module);

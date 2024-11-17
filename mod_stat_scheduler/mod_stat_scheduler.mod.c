@@ -35,16 +35,28 @@ MODULE_INFO(retpoline, "Y");
 
 static const char ____versions[]
 __used __section("__versions") =
-	"\x14\x00\x00\x00\xbb\x6d\xfb\xbd"
-	"__fentry__\0\0"
 	"\x10\x00\x00\x00\x7e\x3a\x2c\x12"
 	"_printk\0"
+	"\x1c\x00\x00\x00\x8f\x18\x02\x7f"
+	"__msecs_to_jiffies\0\0"
+	"\x20\x00\x00\x00\x6d\xb5\xfc\xb2"
+	"queue_delayed_work_on\0\0\0"
 	"\x1c\x00\x00\x00\xca\x39\x82\x5b"
 	"__x86_return_thunk\0\0"
 	"\x2c\x00\x00\x00\xc6\xfa\xb1\x54"
 	"__ubsan_handle_load_invalid_value\0\0\0"
+	"\x18\x00\x00\x00\xed\x25\xcd\x49"
+	"alloc_workqueue\0"
+	"\x24\x00\x00\x00\x4a\x18\xa7\x9f"
+	"cancel_delayed_work_sync\0\0\0\0"
+	"\x1c\x00\x00\x00\x0c\xd2\x03\x8c"
+	"destroy_workqueue\0\0\0"
+	"\x20\x00\x00\x00\x6a\xdf\xee\xff"
+	"delayed_work_timer_fn\0\0\0"
 	"\x18\x00\x00\x00\x4c\xf1\x5a\xb3"
 	"param_ops_int\0\0\0"
+	"\x14\x00\x00\x00\xbb\x6d\xfb\xbd"
+	"__fentry__\0\0"
 	"\x18\x00\x00\x00\x3a\x0a\xd8\xfc"
 	"module_layout\0\0\0"
 	"\x00\x00\x00\x00\x00\x00\x00\x00";
@@ -52,4 +64,4 @@ __used __section("__versions") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "46CF017923960AF343688D3");
+MODULE_INFO(srcversion, "80894E8E1066D57F58A09E3");
