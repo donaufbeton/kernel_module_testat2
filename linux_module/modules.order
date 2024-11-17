@@ -1,0 +1,4 @@
+/home/test/Documents/testat2/kernel_module_testat2/linux_module/linux_module.o
+/home/test/Documents/testat2/kernel_module_testat2/linux_module/mod_kmalloc.o
+/home/test/Documents/testat2/kernel_module_testat2/linux_module/mod_tasklet_timing.o
+/home/test/Documents/testat2/kernel_module_testat2/linux_module/mod_delayed_workqueue.o

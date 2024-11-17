@@ -1,0 +1,1 @@
+savedcmd_/home/test/Documents/testat2/kernel_module_testat2/linux_module/mod_kmalloc.mod := printf '%s\n'   mod_kmalloc.o | awk '!x[$$0]++ { print("/home/test/Documents/testat2/kernel_module_testat2/linux_module/"$$0) }' > /home/test/Documents/testat2/kernel_module_testat2/linux_module/mod_kmalloc.mod
