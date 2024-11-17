@@ -47,6 +47,8 @@ __used __section("__versions") =
 	"queue_delayed_work_on\0\0\0"
 	"\x1c\x00\x00\x00\xca\x39\x82\x5b"
 	"__x86_return_thunk\0\0"
+	"\x28\x00\x00\x00\xb3\x1c\xa2\x87"
+	"__ubsan_handle_out_of_bounds\0\0\0\0"
 	"\x2c\x00\x00\x00\xc6\xfa\xb1\x54"
 	"__ubsan_handle_load_invalid_value\0\0\0"
 	"\x18\x00\x00\x00\xed\x25\xcd\x49"
@@ -68,4 +70,4 @@ __used __section("__versions") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "BEFFF1B66DA63450C24FC1A");
+MODULE_INFO(srcversion, "DBA390B1D57A4CA43CB7B68");
