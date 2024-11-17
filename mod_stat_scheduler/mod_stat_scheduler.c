@@ -75,7 +75,7 @@ static void work_handler(struct work_struct *w) {
     int length = current->latency_record_count;
 
     for (int i = 0; i < length; i++) {
-        printk(KERN_DEBUG "Backtrace an 0: %p\n", (void*) current->latency_record[i].backtrace[0]);
+        printk(KERN_DEBUG "Backtrace an 0: %pX\n", (void*) current->latency_record[i].backtrace[0]);
     }
 
    
